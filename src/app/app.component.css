@@ -1,0 +1,28 @@
+body {
+  background: linear-gradient(135deg, #e0f7fa, #fff3e0);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.topic-mode {
+  min-height: 100vh;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.custom-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  background-color: #fff;
+}
+
+.input-box {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.ask-button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}

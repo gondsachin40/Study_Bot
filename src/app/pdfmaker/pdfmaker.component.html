@@ -1,0 +1,19 @@
+@if(flag){
+<br>
+<button (click)="change()">GO TO EDIT PDF</button>
+}@else{
+  <button (click)="generatePDF()">Generate PDF </button>
+  <div class="card shadow p-4 text-center" style="background-color: rgb(252, 244, 245);">
+    @for(x of MCQ ; track MCQ; let idx = $index;){
+    <input class="btn btn-outline-primary" placeholder="{{x.question}}" (change)="onQuestion(idx,$event)">
+    <div class="d-grid gap-2">
+        <input class="btn btn-outline-primary" placeholder="{{x.options[0]}}" (change)="onChange(idx, 0, $event)">
+        <input class="btn btn-outline-primary" placeholder="{{x.options[1]}}" (change)="onChange(idx, 1, $event)">
+        <input class="btn btn-outline-primary" placeholder="{{x.options[2]}}" (change)="onChange(idx, 2, $event)">
+        <input class="btn btn-outline-primary" placeholder="{{x.options[3]}}" (change)="onChange(idx, 3, $event)">
+         
+    </div>
+    <br>
+    }
+  </div>
+}

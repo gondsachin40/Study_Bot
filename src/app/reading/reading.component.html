@@ -1,0 +1,8 @@
+<h1 class="text-center text-primary">Enter Text Mode</h1>
+<div class="container d-flex flex-column align-items-center">
+    <div class="input-group mb-3 w-100 w-md-75 w-lg-50">
+        <textarea class="form-control" placeholder="Enter your Text........." rows="8" style="resize: vertical; min-height: 150px;" #question></textarea>
+    </div>
+    <button class="btn btn-primary" (click)="call(question.value)">Done</button>   
+    <p style="color: white;">{{ans}}</p>
+</div>

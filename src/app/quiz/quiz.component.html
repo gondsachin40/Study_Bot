@@ -1,0 +1,65 @@
+
+@if(flag){
+  <br>
+  <br>
+<div class="card shadow p-4 text-center" style="background-color: rgb(252, 244, 245);">
+  <h3 class="mb-3">{{Question}}</h3>
+  <div class="d-grid gap-2">
+      @if(over === -1){
+          <button class="btn btn-outline-primary" (click)="checkAns(1)">{{op1}}</button>
+          <button class="btn btn-outline-primary" (click)="checkAns(2)">{{op2}}</button>
+          <button class="btn btn-outline-primary" (click)="checkAns(3)">{{op3}}</button>
+          <button class="btn btn-outline-primary" (click)="checkAns(4)">{{op4}}</button>
+      }@else{
+          @if(p1 === 1){ 
+            <button class="btn btn-outline-primary btn-success text-white">{{op1}}</button>
+          }@else if(p1 === -1){
+            <button class="btn btn-outline-primary btn-danger text-white">{{op1}}</button>
+          }@else {
+            <button class="btn btn-outline-primary">{{op1}}</button>
+          }
+          @if(p2 === 1){ 
+            <button class="btn btn-outline-primary btn-success text-white">{{op2}}</button>
+          }@else if(p2 === -1){
+            <button class="btn btn-outline-primary btn-danger text-white">{{op2}}</button>
+          }@else {
+            <button class="btn btn-outline-primary">{{op2}}</button>
+          }
+          @if(p3 === 1){ 
+            <button class="btn btn-outline-primary btn-success text-white">{{op3}}</button>
+          }@else if(p3 === -1){
+            <button class="btn btn-outline-primary btn-danger text-white">{{op3}}</button>
+          }@else {
+            <button class="btn btn-outline-primary">{{op3}}</button>
+          }
+          @if(p4 === 1){ 
+            <button class="btn btn-outline-primary btn-success text-white">{{op4}}</button>
+          }@else if(p4 === -1){
+            <button class="btn btn-outline-primary btn-danger text-white">{{op4}}</button>
+          }@else {
+            <button class="btn btn-outline-primary">{{op4}}</button>
+          }
+      }
+  </div>
+</div>
+<button class="btn btn-primary position-fixed bottom-3 end-0 me-3" (click)="update()">Next</button>
+}@else{
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-sm-12">
+            <div class="card text-center">
+              <div class="card-header bg-primary text-white">
+                <h4>Scoreboard</h4>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Your Score</h5>
+                <p class="card-text">
+                  <span>{{score}}</span> / <span>{{len}}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <app-pdfmaker></app-pdfmaker>
+    }
